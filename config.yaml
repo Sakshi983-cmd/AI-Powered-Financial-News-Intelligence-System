@@ -1,0 +1,145 @@
+# System Settings
+system:
+  name: "Tradl News Intelligence"
+  version: "1.0.0"
+  debug: true
+
+# LangGraph Settings
+langgraph:
+  max_iterations: 10
+  timeout: 30
+
+# Vector Database
+vector_db:
+  collection_name: "financial_news"
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  similarity_threshold: 0.85
+  top_k: 10
+
+# Deduplication
+deduplication:
+  similarity_threshold: 0.90
+  time_window_hours: 24
+  cluster_method: "dbscan"
+  min_samples: 2
+
+# Entity Extraction
+entities:
+  confidence_threshold: 0.7
+  custom_entities:
+    - "NSE"
+    - "BSE"
+    - "SEBI"
+    - "RBI"
+    - "Nifty"
+    - "Sensex"
+
+# Stock Impact Mapping
+impact:
+  direct_mention: 1.0
+  sector_wide: 0.75
+  regulatory: 0.65
+  supply_chain: 0.50
+  competitor: 0.40
+
+# Knowledge Graph
+knowledge_graph:
+  max_depth: 3
+  relationship_types:
+    - "PART_OF"
+    - "REGULATED_BY"
+    - "COMPETES_WITH"
+    - "SUPPLIES_TO"
+    - "AFFECTS"
+
+# Sentiment Analysis
+sentiment:
+  enabled: true
+  use_vader: true
+  confidence_threshold: 0.6
+
+# Query Processing
+query:
+  max_results: 20
+  re_rank: true
+  context_expansion: true
+  explain_results: true
+
+# API Settings
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: true
+
+# Paths
+paths:
+  data_dir: "data/"
+  chroma_dir: "chroma_db/"
+  logs_dir: "logs/"
+```
+
+**Save kiya?** ✅
+
+---
+
+## 📝 FILE 3: `.gitignore`
+
+**CODE:**
+```
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+chroma_db/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data (except samples)
+data/*.json
+!data/sample_*.json
+```
+
+**Save!** ✅
+
+---
+
+## 📝 FILE 4: `.env`
+
+**CODE:**
+```
+# API Keys (add your keys later if needed)
+ANTHROPIC_API_KEY=your_api_key_here
