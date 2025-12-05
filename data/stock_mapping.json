@@ -1,0 +1,103 @@
+{
+  "companies": {
+    "HDFCBANK": {
+      "name": "HDFC Bank",
+      "sector": "Banking",
+      "market_cap": "Large Cap",
+      "index": ["Nifty50", "Nifty Bank"]
+    },
+    "ICICIBANK": {
+      "name": "ICICI Bank",
+      "sector": "Banking",
+      "market_cap": "Large Cap",
+      "index": ["Nifty50", "Nifty Bank"]
+    },
+    "AXISBANK": {
+      "name": "Axis Bank",
+      "sector": "Banking",
+      "market_cap": "Large Cap",
+      "index": ["Nifty50", "Nifty Bank"]
+    },
+    "SBIN": {
+      "name": "State Bank of India",
+      "sector": "Banking",
+      "market_cap": "Large Cap",
+      "index": ["Nifty50", "Nifty Bank"]
+    },
+    "TCS": {
+      "name": "Tata Consultancy Services",
+      "sector": "IT",
+      "market_cap": "Large Cap",
+      "index": ["Nifty50", "Nifty IT"]
+    },
+    "INFY": {
+      "name": "Infosys",
+      "sector": "IT",
+      "market_cap": "Large Cap",
+      "index": ["Nifty50", "Nifty IT"]
+    },
+    "WIPRO": {
+      "name": "Wipro",
+      "sector": "IT",
+      "market_cap": "Large Cap",
+      "index": ["Nifty IT"]
+    },
+    "RELIANCE": {
+      "name": "Reliance Industries",
+      "sector": "Energy",
+      "market_cap": "Large Cap",
+      "index": ["Nifty50"]
+    },
+    "TATAMOTORS": {
+      "name": "Tata Motors",
+      "sector": "Auto",
+      "market_cap": "Large Cap",
+      "index": ["Nifty Auto"]
+    },
+    "MARUTI": {
+      "name": "Maruti Suzuki",
+      "sector": "Auto",
+      "market_cap": "Large Cap",
+      "index": ["Nifty50", "Nifty Auto"]
+    }
+  },
+  "sectors": {
+    "Banking": {
+      "description": "Banking and financial services",
+      "regulator": "RBI",
+      "major_players": ["HDFCBANK", "ICICIBANK", "AXISBANK", "SBIN"]
+    },
+    "IT": {
+      "description": "Information Technology services",
+      "regulator": "SEBI",
+      "major_players": ["TCS", "INFY", "WIPRO"]
+    },
+    "Auto": {
+      "description": "Automobile manufacturing",
+      "regulator": "SEBI",
+      "major_players": ["TATAMOTORS", "MARUTI"]
+    },
+    "Energy": {
+      "description": "Oil, Gas, and Energy",
+      "regulator": "SEBI",
+      "major_players": ["RELIANCE"]
+    },
+    "Pharma": {
+      "description": "Pharmaceuticals",
+      "regulator": "SEBI",
+      "major_players": []
+    }
+  },
+  "regulators": {
+    "RBI": {
+      "full_name": "Reserve Bank of India",
+      "type": "Central Bank",
+      "regulates": ["Banking"]
+    },
+    "SEBI": {
+      "full_name": "Securities and Exchange Board of India",
+      "type": "Market Regulator",
+      "regulates": ["IT", "Auto", "Pharma", "Energy"]
+    }
+  }
+}

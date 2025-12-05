@@ -1,0 +1,213 @@
+[
+  {
+    "id": "art_001",
+    "title": "RBI increases repo rate by 25 basis points to combat inflation",
+    "content": "The Reserve Bank of India raised the repo rate by 25 basis points to 6.75% in a move to control rising inflation. Governor stated that inflation remains above the target range and monetary policy needs to remain restrictive.",
+    "source": "Economic Times",
+    "date": "2024-12-01",
+    "url": "https://example.com/rbi-rate-hike"
+  },
+  {
+    "id": "art_002",
+    "title": "Reserve Bank hikes interest rates by 0.25%",
+    "content": "In a surprise move, RBI increased the policy rate by 25 bps citing persistent inflation pressures. The decision came after retail inflation stayed above 6% for three consecutive months.",
+    "source": "Business Standard",
+    "date": "2024-12-01"
+  },
+  {
+    "id": "art_003",
+    "title": "Central bank raises repo rate to 6.75%",
+    "content": "Reserve Bank of India announced a 25 basis point hike in the repo rate to 6.75%, signaling a hawkish stance on inflation control. Banking stocks fell on the news.",
+    "source": "MoneyControl",
+    "date": "2024-12-01"
+  },
+  {
+    "id": "art_004",
+    "title": "HDFC Bank announces 15% dividend and stock buyback",
+    "content": "HDFC Bank's board approved a dividend of Rs 19 per share, representing a 15% payout. Additionally, the bank announced a buyback program worth Rs 10,000 crore.",
+    "source": "LiveMint",
+    "date": "2024-12-01"
+  },
+  {
+    "id": "art_005",
+    "title": "ICICI Bank opens 500 new branches across tier-2 cities",
+    "content": "ICICI Bank announced the opening of 500 new branches across tier-2 and tier-3 cities as part of its expansion strategy.",
+    "source": "Financial Express",
+    "date": "2024-11-30"
+  },
+  {
+    "id": "art_006",
+    "title": "Banking sector NPAs decline to 5-year low",
+    "content": "Non-performing assets in the Indian banking sector have declined to their lowest level in five years at 3.2%. Credit growth stands at 16%, driven by retail and MSME lending.",
+    "source": "Economic Times",
+    "date": "2024-11-30"
+  },
+  {
+    "id": "art_007",
+    "title": "TCS wins $2 billion digital transformation deal",
+    "content": "Tata Consultancy Services secured a massive $2 billion contract from a European retail giant for digital transformation services spanning 5 years.",
+    "source": "Business Standard",
+    "date": "2024-11-29"
+  },
+  {
+    "id": "art_008",
+    "title": "Infosys Q3 results beat estimates, revenue up 18%",
+    "content": "Infosys reported strong Q3 results with revenue growing 18% YoY to Rs 38,500 crore. The company raised its FY guidance to 16-17%.",
+    "source": "MoneyControl",
+    "date": "2024-11-29"
+  },
+  {
+    "id": "art_009",
+    "title": "Reliance Industries plans Rs 75,000 crore green energy investment",
+    "content": "Reliance Industries announced plans to invest Rs 75,000 crore in renewable energy over the next 3 years focusing on solar and green hydrogen.",
+    "source": "LiveMint",
+    "date": "2024-11-28"
+  },
+  {
+    "id": "art_010",
+    "title": "Maruti Suzuki launches new SUV, expects 20% sales growth",
+    "content": "Maruti Suzuki unveiled its latest SUV model priced at Rs 12.5 lakh. The company expects the new launch to drive 20% sales growth in Q4.",
+    "source": "Economic Times",
+    "date": "2024-11-28"
+  },
+  {
+    "id": "art_011",
+    "title": "SEBI introduces new regulations for AI trading systems",
+    "content": "Securities and Exchange Board of India announced new guidelines for algorithmic and AI-based trading systems to ensure market stability.",
+    "source": "Financial Express",
+    "date": "2024-11-27"
+  },
+  {
+    "id": "art_012",
+    "title": "Nifty Bank index hits all-time high on strong Q3 earnings",
+    "content": "The Nifty Bank index surged to a record high of 45,800, driven by better-than-expected Q3 earnings from major banks.",
+    "source": "MoneyControl",
+    "date": "2024-11-27"
+  },
+  {
+    "id": "art_013",
+    "title": "Sun Pharma receives USFDA approval for generic drug",
+    "content": "Sun Pharmaceutical Industries received approval from the US FDA for its generic version of a blockbuster medication with annual US sales of $1.2 billion.",
+    "source": "Business Standard",
+    "date": "2024-11-26"
+  },
+  {
+    "id": "art_014",
+    "title": "Pharmaceutical sector rallies on export growth prospects",
+    "content": "Indian pharmaceutical stocks rallied as export data showed 22% growth in the sector. Increased demand from US and European markets drove the surge.",
+    "source": "Economic Times",
+    "date": "2024-11-26"
+  },
+  {
+    "id": "art_015",
+    "title": "Tata Motors electric vehicle sales surge 150% YoY",
+    "content": "Tata Motors reported a 150% year-on-year increase in electric vehicle sales, selling 48,000 EVs in the quarter. The company aims to launch 5 new EV models next year.",
+    "source": "LiveMint",
+    "date": "2024-11-25"
+  },
+  {
+    "id": "art_016",
+    "title": "Adani Green Energy secures 2 GW solar project",
+    "content": "Adani Green Energy won a 2 gigawatt solar power project worth Rs 12,000 crore. The project will be commissioned over 18 months.",
+    "source": "Business Standard",
+    "date": "2024-11-25"
+  },
+  {
+    "id": "art_017",
+    "title": "IT sector hiring picks up 35% in November",
+    "content": "Indian IT sector hiring surged 35% in November compared to the previous month, led by demand in cloud, AI, and cybersecurity roles.",
+    "source": "Economic Times",
+    "date": "2024-11-24"
+  },
+  {
+    "id": "art_018",
+    "title": "Asian Paints launches new premium product line",
+    "content": "Asian Paints introduced a premium range of eco-friendly paints targeting the luxury home segment with prices 30% higher than regular products.",
+    "source": "LiveMint",
+    "date": "2024-11-24"
+  },
+  {
+    "id": "art_019",
+    "title": "Zomato reports first profitable quarter, shares jump 12%",
+    "content": "Food delivery platform Zomato posted its first quarterly profit of Rs 36 crore. The stock surged 12% on the news reaching a 52-week high.",
+    "source": "MoneyControl",
+    "date": "2024-11-23"
+  },
+  {
+    "id": "art_020",
+    "title": "Coal India plans to reduce carbon emissions by 40%",
+    "content": "Coal India announced a comprehensive plan to cut carbon emissions by 40% by 2030 through adoption of clean coal technologies and renewable energy.",
+    "source": "Financial Express",
+    "date": "2024-11-23"
+  },
+  {
+    "id": "art_021",
+    "title": "Bajaj Auto electric scooter bookings cross 1 lakh",
+    "content": "Bajaj Auto's new electric scooter received over 1 lakh bookings within 48 hours of launch, indicating strong consumer demand for EVs.",
+    "source": "Business Standard",
+    "date": "2024-11-22"
+  },
+  {
+    "id": "art_022",
+    "title": "SBI reports 15% growth in home loan disbursements",
+    "content": "State Bank of India witnessed 15% YoY growth in home loan disbursements driven by festive season demand and competitive interest rates.",
+    "source": "Economic Times",
+    "date": "2024-11-22"
+  },
+  {
+    "id": "art_023",
+    "title": "Wipro bags multi-year cloud deal from US healthcare firm",
+    "content": "Wipro secured a 5-year cloud transformation contract worth $500 million from a leading US healthcare provider.",
+    "source": "LiveMint",
+    "date": "2024-11-21"
+  },
+  {
+    "id": "art_024",
+    "title": "Dr Reddy's launches generic version of cancer drug",
+    "content": "Dr Reddy's Laboratories launched the generic version of a key cancer treatment drug in India, priced 60% lower than the original.",
+    "source": "Business Standard",
+    "date": "2024-11-21"
+  },
+  {
+    "id": "art_025",
+    "title": "Mahindra & Mahindra SUV sales hit record high",
+    "content": "Mahindra & Mahindra's SUV sales reached an all-time monthly high of 42,000 units in November driven by strong demand for Scorpio and XUV models.",
+    "source": "MoneyControl",
+    "date": "2024-11-20"
+  },
+  {
+    "id": "art_026",
+    "title": "HDFC Life Insurance IPO subscription 2.5x on day 1",
+    "content": "HDFC Life Insurance's IPO received overwhelming response with 2.5 times subscription on the first day. The issue closes on November 25.",
+    "source": "Economic Times",
+    "date": "2024-11-20"
+  },
+  {
+    "id": "art_027",
+    "title": "Larsen & Toubro wins Rs 8,000 crore infrastructure order",
+    "content": "L&T Construction won a major infrastructure order worth Rs 8,000 crore for building expressway connecting two major cities.",
+    "source": "Financial Express",
+    "date": "2024-11-19"
+  },
+  {
+    "id": "art_028",
+    "title": "Bharti Airtel 5G rollout reaches 50 cities",
+    "content": "Bharti Airtel completed 5G network rollout in 50 cities across India, covering over 30% of the urban population.",
+    "source": "Business Standard",
+    "date": "2024-11-19"
+  },
+  {
+    "id": "art_029",
+    "title": "Gold prices surge to Rs 65,000 per 10 grams",
+    "content": "Gold prices in India touched a new high of Rs 65,000 per 10 grams driven by global uncertainty and festival season demand.",
+    "source": "LiveMint",
+    "date": "2024-11-18"
+  },
+  {
+    "id": "art_030",
+    "title": "Nifty50 closes at record high of 21,800",
+    "content": "Indian benchmark index Nifty50 closed at an all-time high of 21,800 supported by strong FII inflows and positive global cues.",
+    "source": "MoneyControl",
+    "date": "2024-11-18"
+  }
+]
