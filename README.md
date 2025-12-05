@@ -94,7 +94,7 @@ python tests/test_accuracy.py
 
 ## 📞 Contact
 
-Built for Tradl Hackathon 2024
+Built for Tradl Hackathon 2025
 
 ---
 
@@ -102,4 +102,5 @@ Built for Tradl Hackathon 2024
 - Knowledge Graph for impact analysis
 - Multi-lingual news processing
 - Explainable AI results
+
 - Business ROI calculator
