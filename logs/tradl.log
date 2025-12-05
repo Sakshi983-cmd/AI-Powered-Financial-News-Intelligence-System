@@ -1,0 +1,168 @@
+2025-12-04 17:01:41,573 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:01:41,588 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:01:43,161 - tradl - INFO -   Found 2 unique, 0 duplicates
+2025-12-04 17:07:00,525 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:07:00,537 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:07:01,760 - tradl - INFO -   Found 2 unique, 0 duplicates
+2025-12-04 17:09:44,513 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:09:44,524 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:09:45,654 - tradl - INFO -   Found 2 unique, 0 duplicates
+2025-12-04 17:18:04,515 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:18:04,525 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:18:04,532 - tradl - INFO - ✓ Tradl Orchestrator initialized with 7 agents
+2025-12-04 17:18:04,538 - tradl - INFO - 🚀 Starting news processing: 2 articles
+2025-12-04 17:18:04,566 - tradl - INFO - → Running Ingestion Agent
+2025-12-04 17:18:04,571 - tradl - INFO - ✓ Ingested article: RBI increases repo rate...
+2025-12-04 17:18:04,575 - tradl - INFO - ✓ Ingested article: RBI increases repo rate...
+2025-12-04 17:18:04,580 - tradl - INFO - ✓ Batch processed 2/2 articles
+2025-12-04 17:18:04,584 - tradl - INFO - → Running Multilingual Agent
+2025-12-04 17:18:05,069 - tradl - INFO - ✓ Processed English article
+2025-12-04 17:18:05,504 - tradl - INFO - ✓ Processed English article
+2025-12-04 17:18:05,510 - tradl - INFO - → Running Deduplication Agent
+2025-12-04 17:18:05,574 - tradl - INFO - ✓ Unique article: RBI increases repo rate
+2025-12-04 17:18:05,604 - tradl - INFO - ✓ Unique article: RBI increases repo rate
+2025-12-04 17:18:05,607 - tradl - INFO -   Found 2 unique, 0 duplicates
+2025-12-04 17:18:05,612 - tradl - INFO - → Running Entity Extraction Agent
+2025-12-04 17:18:05,616 - tradl - INFO - ✓ Extracted entities from: RBI increases repo rate (0 companies, 0 sectors)
+2025-12-04 17:18:05,620 - tradl - INFO - ✓ Extracted entities from: RBI increases repo rate (0 companies, 0 sectors)
+2025-12-04 17:18:05,624 - tradl - INFO - → Running Impact Analysis Agent
+2025-12-04 17:18:05,627 - tradl - INFO - ✓ Impact analysis: 0 direct, 0 sector, 0 supply chain
+2025-12-04 17:18:05,632 - tradl - INFO - ✓ Impact analysis: 0 direct, 0 sector, 0 supply chain
+2025-12-04 17:18:05,636 - tradl - INFO - → Running Storage Agent
+2025-12-04 17:18:05,672 - tradl - INFO - ✓ Stored article: RBI increases repo rate (ID: t1)
+2025-12-04 17:18:05,702 - tradl - INFO - ✓ Stored article: RBI increases repo rate (ID: t2)
+2025-12-04 17:18:05,705 - tradl - INFO - ✓ Batch storage: 2 stored, 0 skipped, 0 errors
+2025-12-04 17:18:05,710 - tradl - INFO - ✓ Processing complete: {'stored': 2, 'skipped': 0, 'errors': 0}
+2025-12-04 17:19:02,239 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:19:02,245 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:19:02,250 - tradl - INFO - ✓ Tradl Orchestrator initialized with 7 agents
+2025-12-04 17:19:02,268 - tradl - INFO - 🚀 Starting news processing: 5 articles
+2025-12-04 17:19:02,298 - tradl - INFO - → Running Ingestion Agent
+2025-12-04 17:19:02,302 - tradl - INFO - ✓ Ingested article: RBI increases repo rate by 25 basis points to comb...
+2025-12-04 17:19:02,306 - tradl - INFO - ✓ Ingested article: Reserve Bank hikes interest rates by 0.25...
+2025-12-04 17:19:02,309 - tradl - INFO - ✓ Ingested article: Central bank raises repo rate to 6.75...
+2025-12-04 17:19:02,312 - tradl - INFO - ✓ Ingested article: HDFC Bank announces 15 dividend and stock buyback...
+2025-12-04 17:19:02,315 - tradl - INFO - ✓ Ingested article: ICICI Bank opens 500 new branches across tier-2 ci...
+2025-12-04 17:19:02,320 - tradl - INFO - ✓ Batch processed 5/5 articles
+2025-12-04 17:19:02,323 - tradl - INFO - → Running Multilingual Agent
+2025-12-04 17:19:02,811 - tradl - INFO - ✓ Processed English article
+2025-12-04 17:19:03,189 - tradl - INFO - ✓ Processed English article
+2025-12-04 17:19:04,218 - tradl - INFO - ✓ Processed English article
+2025-12-04 17:19:04,624 - tradl - INFO - ✓ Processed English article
+2025-12-04 17:19:05,004 - tradl - INFO - ✓ Processed English article
+2025-12-04 17:19:05,008 - tradl - INFO - → Running Deduplication Agent
+2025-12-04 17:19:05,116 - tradl - INFO - ✓ Unique article: RBI increases repo rate by 25 basis points to comb
+2025-12-04 17:19:05,166 - tradl - INFO - ✓ Unique article: Reserve Bank hikes interest rates by 0.25
+2025-12-04 17:19:05,209 - tradl - INFO - ✓ Unique article: Central bank raises repo rate to 6.75
+2025-12-04 17:19:05,258 - tradl - INFO - ✓ Unique article: HDFC Bank announces 15 dividend and stock buyback
+2025-12-04 17:19:05,301 - tradl - INFO - ✓ Unique article: ICICI Bank opens 500 new branches across tier-2 ci
+2025-12-04 17:19:05,305 - tradl - INFO -   Found 5 unique, 0 duplicates
+2025-12-04 17:19:05,310 - tradl - INFO - → Running Entity Extraction Agent
+2025-12-04 17:19:05,315 - tradl - INFO - ✓ Extracted entities from: RBI increases repo rate by 25 basis points to comb (0 companies, 0 sectors)
+2025-12-04 17:19:05,321 - tradl - INFO - ✓ Extracted entities from: Reserve Bank hikes interest rates by 0.25 (0 companies, 1 sectors)
+2025-12-04 17:19:05,325 - tradl - INFO - ✓ Extracted entities from: Central bank raises repo rate to 6.75 (0 companies, 1 sectors)
+2025-12-04 17:19:05,331 - tradl - INFO - ✓ Extracted entities from: HDFC Bank announces 15 dividend and stock buyback (1 companies, 1 sectors)
+2025-12-04 17:19:05,336 - tradl - INFO - ✓ Extracted entities from: ICICI Bank opens 500 new branches across tier-2 ci (1 companies, 1 sectors)
+2025-12-04 17:19:05,341 - tradl - INFO - → Running Impact Analysis Agent
+2025-12-04 17:19:05,346 - tradl - INFO - ✓ Impact analysis: 0 direct, 0 sector, 0 supply chain
+2025-12-04 17:19:05,351 - tradl - INFO - ✓ Impact analysis: 0 direct, 2 sector, 0 supply chain
+2025-12-04 17:19:05,354 - tradl - INFO - ✓ Impact analysis: 0 direct, 3 sector, 0 supply chain
+2025-12-04 17:19:05,359 - tradl - INFO - ✓ Impact analysis: 0 direct, 2 sector, 0 supply chain
+2025-12-04 17:19:05,363 - tradl - INFO - ✓ Impact analysis: 0 direct, 2 sector, 0 supply chain
+2025-12-04 17:19:05,367 - tradl - INFO - → Running Storage Agent
+2025-12-04 17:19:05,420 - tradl - INFO - ✓ Stored article: RBI increases repo rate by 25 basis points to comb (ID: art_001)
+2025-12-04 17:19:05,465 - tradl - INFO - ✓ Stored article: Reserve Bank hikes interest rates by 0.25 (ID: art_002)
+2025-12-04 17:19:05,505 - tradl - INFO - ✓ Stored article: Central bank raises repo rate to 6.75 (ID: art_003)
+2025-12-04 17:19:05,551 - tradl - INFO - ✓ Stored article: HDFC Bank announces 15 dividend and stock buyback (ID: art_004)
+2025-12-04 17:19:05,591 - tradl - INFO - ✓ Stored article: ICICI Bank opens 500 new branches across tier-2 ci (ID: art_005)
+2025-12-04 17:19:05,595 - tradl - INFO - ✓ Batch storage: 5 stored, 0 skipped, 0 errors
+2025-12-04 17:19:05,600 - tradl - INFO - ✓ Processing complete: {'stored': 5, 'skipped': 0, 'errors': 0}
+2025-12-04 17:19:05,611 - tradl - INFO - 🔍 Processing query: RBI policy
+2025-12-04 17:19:05,614 - tradl - INFO - ✓ Extracted entities from: RBI policy (0 companies, 0 sectors)
+2025-12-04 17:19:05,618 - tradl - INFO -   Extracted entities: {'companies': [], 'sectors': [], 'regulators': ['RBI'], 'people': [], 'locations': [], 'events': []}
+2025-12-04 17:19:05,623 - tradl - INFO -   Expanded to: 4 entities
+2025-12-04 17:19:05,660 - tradl - INFO - ✓ Found 5 relevant articles
+2025-12-04 17:27:37,133 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:27:37,146 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:27:37,153 - tradl - INFO - ✓ Tradl Orchestrator initialized with 7 agents
+2025-12-04 17:27:37,157 - tradl - INFO - 🚀 Starting news processing: 1 articles
+2025-12-04 17:27:37,197 - tradl - INFO - → Running Ingestion Agent
+2025-12-04 17:27:37,202 - tradl - INFO - ✓ Ingested article: HDFC Bank announces dividend...
+2025-12-04 17:27:37,207 - tradl - INFO - ✓ Batch processed 1/1 articles
+2025-12-04 17:27:37,211 - tradl - INFO - → Running Multilingual Agent
+2025-12-04 17:27:37,973 - tradl - INFO - ✓ Processed English article
+2025-12-04 17:27:37,977 - tradl - INFO - → Running Deduplication Agent
+2025-12-04 17:27:38,230 - tradl - INFO - ✓ Unique article: HDFC Bank announces dividend
+2025-12-04 17:27:38,233 - tradl - INFO -   Found 1 unique, 0 duplicates
+2025-12-04 17:27:38,237 - tradl - INFO - → Running Entity Extraction Agent
+2025-12-04 17:27:38,242 - tradl - INFO - ✓ Extracted entities from: HDFC Bank announces dividend (1 companies, 0 sectors)
+2025-12-04 17:27:38,249 - tradl - INFO - → Running Impact Analysis Agent
+2025-12-04 17:27:38,252 - tradl - INFO - ✓ Impact analysis: 0 direct, 0 sector, 0 supply chain
+2025-12-04 17:27:38,257 - tradl - INFO - → Running Storage Agent
+2025-12-04 17:27:38,299 - tradl - INFO - ✓ Stored article: HDFC Bank announces dividend (ID: article_0)
+2025-12-04 17:27:38,302 - tradl - INFO - ✓ Batch storage: 1 stored, 0 skipped, 0 errors
+2025-12-04 17:27:38,306 - tradl - INFO - ✓ Processing complete: {'stored': 1, 'skipped': 0, 'errors': 0}
+2025-12-04 17:27:38,310 - tradl - INFO - 🔍 Processing query: HDFC Bank
+2025-12-04 17:27:38,314 - tradl - INFO - ✓ Extracted entities from: HDFC Bank (1 companies, 0 sectors)
+2025-12-04 17:27:38,318 - tradl - INFO -   Extracted entities: {'companies': ['HDFC Bank'], 'sectors': [], 'regulators': [], 'people': [], 'locations': [], 'events': []}
+2025-12-04 17:27:38,324 - tradl - INFO -   Expanded to: 1 entities
+2025-12-04 17:27:38,353 - tradl - INFO - ✓ Found 1 relevant articles
+2025-12-04 17:27:47,176 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:27:47,183 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:27:47,188 - tradl - INFO - ✓ Tradl Orchestrator initialized with 7 agents
+2025-12-04 17:27:47,191 - tradl - INFO - 🚀 Starting news processing: 1 articles
+2025-12-04 17:27:47,198 - tradl - INFO - → Running Ingestion Agent
+2025-12-04 17:27:47,201 - tradl - INFO - ✓ Ingested article: RBI increases repo rate...
+2025-12-04 17:27:47,205 - tradl - INFO - ✓ Batch processed 1/1 articles
+2025-12-04 17:27:47,210 - tradl - INFO - → Running Multilingual Agent
+2025-12-04 17:27:47,795 - tradl - INFO - ✓ Processed English article
+2025-12-04 17:27:47,805 - tradl - INFO - → Running Deduplication Agent
+2025-12-04 17:27:47,864 - tradl - INFO - ✓ Unique article: RBI increases repo rate
+2025-12-04 17:27:47,867 - tradl - INFO -   Found 1 unique, 0 duplicates
+2025-12-04 17:27:47,872 - tradl - INFO - → Running Entity Extraction Agent
+2025-12-04 17:27:47,875 - tradl - INFO - ✓ Extracted entities from: RBI increases repo rate (0 companies, 1 sectors)
+2025-12-04 17:27:47,879 - tradl - INFO - → Running Impact Analysis Agent
+2025-12-04 17:27:47,883 - tradl - INFO - ✓ Impact analysis: 0 direct, 3 sector, 0 supply chain
+2025-12-04 17:27:47,888 - tradl - INFO - → Running Storage Agent
+2025-12-04 17:27:47,918 - tradl - INFO - ✓ Stored article: RBI increases repo rate (ID: article_0)
+2025-12-04 17:27:47,920 - tradl - INFO - ✓ Batch storage: 1 stored, 0 skipped, 0 errors
+2025-12-04 17:27:47,924 - tradl - INFO - ✓ Processing complete: {'stored': 1, 'skipped': 0, 'errors': 0}
+2025-12-04 17:27:47,929 - tradl - INFO - 🔍 Processing query: Banking sector
+2025-12-04 17:27:47,931 - tradl - INFO - ✓ Extracted entities from: Banking sector (0 companies, 1 sectors)
+2025-12-04 17:27:47,935 - tradl - INFO -   Extracted entities: {'companies': [], 'sectors': ['Banking'], 'regulators': [], 'people': [], 'locations': [], 'events': []}
+2025-12-04 17:27:47,940 - tradl - INFO -   Expanded to: 7 entities
+2025-12-04 17:27:47,970 - tradl - INFO - ✓ Found 1 relevant articles
+2025-12-04 17:27:53,834 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:27:53,839 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:27:53,844 - tradl - INFO - ✓ Tradl Orchestrator initialized with 7 agents
+2025-12-04 17:27:53,847 - tradl - INFO - 🚀 Starting news processing: 1 articles
+2025-12-04 17:27:53,854 - tradl - INFO - → Running Ingestion Agent
+2025-12-04 17:27:53,857 - tradl - INFO - ✓ Ingested article: Test article...
+2025-12-04 17:27:53,861 - tradl - INFO - ✓ Batch processed 1/1 articles
+2025-12-04 17:27:53,866 - tradl - INFO - → Running Multilingual Agent
+2025-12-04 17:27:54,417 - tradl - INFO - ✓ Processed English article
+2025-12-04 17:27:54,422 - tradl - INFO - → Running Deduplication Agent
+2025-12-04 17:27:54,477 - tradl - INFO - ✓ Unique article: Test article
+2025-12-04 17:27:54,480 - tradl - INFO -   Found 1 unique, 0 duplicates
+2025-12-04 17:27:54,484 - tradl - INFO - → Running Entity Extraction Agent
+2025-12-04 17:27:54,487 - tradl - INFO - ✓ Extracted entities from: Test article (1 companies, 0 sectors)
+2025-12-04 17:27:54,492 - tradl - INFO - → Running Impact Analysis Agent
+2025-12-04 17:27:54,496 - tradl - INFO - ✓ Impact analysis: 0 direct, 0 sector, 0 supply chain
+2025-12-04 17:27:54,500 - tradl - INFO - → Running Storage Agent
+2025-12-04 17:27:54,530 - tradl - INFO - ✓ Stored article: Test article (ID: article_0)
+2025-12-04 17:27:54,534 - tradl - INFO - ✓ Batch storage: 1 stored, 0 skipped, 0 errors
+2025-12-04 17:27:54,538 - tradl - INFO - ✓ Processing complete: {'stored': 1, 'skipped': 0, 'errors': 0}
+2025-12-04 17:27:54,544 - tradl - INFO - 🔍 Processing query: HDFC
+2025-12-04 17:27:54,547 - tradl - INFO - ✓ Extracted entities from: HDFC (0 companies, 0 sectors)
+2025-12-04 17:27:54,551 - tradl - INFO -   Extracted entities: {'companies': [], 'sectors': [], 'regulators': [], 'people': [], 'locations': [], 'events': []}
+2025-12-04 17:27:54,555 - tradl - INFO -   Expanded to: 0 entities
+2025-12-04 17:27:54,583 - tradl - INFO - ✓ Found 1 relevant articles
+2025-12-04 17:30:24,928 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:30:24,955 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:30:24,962 - tradl - INFO - ✓ Tradl Orchestrator initialized with 7 agents
+2025-12-04 17:32:11,049 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:32:11,062 - tradl - ERROR - spaCy model not found. Run: python -m spacy download en_core_web_sm
+2025-12-04 17:32:11,067 - tradl - INFO - ✓ Tradl Orchestrator initialized with 7 agents
+2025-12-04 17:42:20,694 - tradl - INFO - ✓ Tradl Orchestrator initialized with 7 agents
+2025-12-04 17:45:11,883 - tradl - INFO - ✓ Tradl Orchestrator initialized with 7 agents
+2025-12-04 17:45:36,245 - tradl - INFO - ✓ Tradl Orchestrator initialized with 7 agents
