@@ -1,87 +1,47 @@
-"""
-News Ingestion Agent - Cleans and standardizes raw news
-"""
-from typing import Dict, List
-import re
-from datetime import datetime
+# agents/ingestion.py
+import aiohttp
+import asyncio
+import json
+import os
+from dotenv import load_dotenv
 from utils.logger import logger
 
+load_dotenv()
+
 class NewsIngestionAgent:
-    """
-    Agent 1: Ingests and standardizes raw news articles
-    """
-    
     def __init__(self):
-        self.processed_count = 0
-    
-    def process(self, raw_article: Dict) -> Dict:
-        """
-        Process raw article into standardized format
-        """
+        self.api_key = os.getenv("NEWSAPI_KEY")
+        self.session = None
+        self.cache = {}  # encrypted cache
+
+    async def _get_session(self):
+        if self.session is None or self.session.closed:
+            self.session = aiohttp.ClientSession()
+        return self.session
+
+    async def fetch_news(self, query: str):
+        session = await self._get_session()
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "User-Agent": "Secure-TradlBot/1.0"
+        }
+        url = f"https://newsapi.org/v2/everything?q={query}&language=en&sortBy=publishedAt"
+        
         try:
-            processed = {
-                'id': raw_article.get('id', f"article_{self.processed_count}"),
-                'title': self._clean_text(raw_article.get('title', '')),
-                'content': self._clean_text(raw_article.get('content', '')),
-                'source': raw_article.get('source', 'Unknown'),
-                'date': self._parse_date(raw_article.get('date', '')),
-                'url': raw_article.get('url', ''),
-                'raw_text': raw_article.get('content', ''),
-                'metadata': {
-                    'processed_at': datetime.now().isoformat(),
-                    'word_count': len(raw_article.get('content', '').split())
-                }
-            }
-            
-            self.processed_count += 1
-            logger.info(f"✓ Ingested article: {processed['title'][:50]}...")
-            
-            return processed
-            
+            async with session.get(url, headers=headers, timeout=10) as resp:
+                data = await resp.json()
+                articles = data.get("articles", [])
+                # Encrypt cache
+                from main_orchestrator import TradlOrchestrator
+                enc = TradlOrchestrator().fernet.encrypt(json.dumps(articles).encode()).decode()
+                self.cache[query] = enc
+                logger.info(f"Fetched {len(articles)} articles for {query}")
+                return articles
         except Exception as e:
-            logger.error(f"Error processing article: {e}")
-            return None
-    
-    def _clean_text(self, text: str) -> str:
-        """Clean and normalize text"""
-        if not text:
-            return ""
-        
-        # Remove extra whitespace
-        text = re.sub(r'\s+', ' ', text)
-        
-        # Remove special characters but keep punctuation
-        text = re.sub(r'[^\w\s\.\,\!\?\-\'\"]', '', text)
-        
-        return text.strip()
-    
-    def _parse_date(self, date_str: str) -> str:
-        """Parse date string to ISO format"""
-        if not date_str:
-            return datetime.now().isoformat()
-        
-        try:
-            # Try common formats
-            for fmt in ['%Y-%m-%d', '%d-%m-%Y', '%d/%m/%Y', '%Y/%m/%d']:
-                try:
-                    dt = datetime.strptime(date_str, fmt)
-                    return dt.isoformat()
-                except:
-                    continue
-            
-            # If parsing fails, return current date
-            return datetime.now().isoformat()
-            
-        except:
-            return datetime.now().isoformat()
-    
-    def batch_process(self, articles: List[Dict]) -> List[Dict]:
-        """Process multiple articles"""
-        processed = []
-        for article in articles:
-            result = self.process(article)
-            if result:
-                processed.append(result)
-        
-        logger.info(f"✓ Batch processed {len(processed)}/{len(articles)} articles")
-        return processed
+            logger.error(f"Fetch failed: {e}")
+            return []
+
+    async def batch_process(self, queries):
+        tasks = [self.fetch_news(q) for q in queries]
+        results = await asyncio.gather(*tasks)
+        return [art for sublist in results for art in sublist]
