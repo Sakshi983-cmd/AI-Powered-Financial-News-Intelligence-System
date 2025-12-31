@@ -4,7 +4,7 @@
 Evolved from hackathon prototype to production-grade multi-agent pipeline: Processes 500+ multilingual articles/day, filters bias/overloads, generates grounded strategies – reducing simulated retail losses by 40% (SEBI-inspired tests on Economic Times/RBI news). Why build this? 5cr+ Indian traders struggle with noisy news; this delivers secure, actionable intel in <2s.
 
 ## 🚀 Live Demo & Quick Start
-- **Frontend UI:** [Vercel Link – Deploy & Paste Here] (Next.js chat: Pre-filled HDFC query, dark theme, smooth animations – Ask "RSI strategy" → Backtest + code instant).
+- **Frontend UI:**  (Next.js chat: Pre-filled HDFC query, dark theme, smooth animations – Ask "RSI strategy" → Backtest + code instant).
 - **Local Backend Test:** `pip install -r requirements.txt && python main_orchestrator.py` (RBI/HDFC sample process → Copilot response).
 - **API UI:** `uvicorn demo.app:app --reload` → localhost:8000 for chat (ties to frontend).
 - **Frontend Run:** cd frontend && npm install && npm run dev → localhost:3000 (Responsive mobile chat).
@@ -62,3 +62,4 @@ Future: Neo4j for KG queries, Docker for K8s deploy. Inspired by SEBI info asymm
 
 ---
 License: MIT | Contributions welcome!
+
