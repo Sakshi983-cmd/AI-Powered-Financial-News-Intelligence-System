@@ -34,35 +34,40 @@ class NewsIngestionAgent:
             self.session = aiohttp.ClientSession(timeout=timeout)
         return self.session
 
-    async def fetch_news(self, query: str):
+    async def fetch_news(self, query: str, session=None):
         """Single query fetch (async, secure headers)"""
         if not self.api_key:
             logger.warning("No API key – Skipping fetch, using cache fallback")
             return self._load_cache(query)  # Bug handle: No key? Cache only
-        
-        session = await self._get_session()
+
+        # Use provided session or get shared one (if in correct loop)
+        if session:
+            use_session = session
+        else:
+            use_session = await self._get_session()
+
         headers = {  # Secure: Key in header (URL leak prevent)
             "Authorization": f"Bearer {self.api_key}",
             "User-Agent": "Secure-TradlBot/1.0 (Custom Finance Agent)"  # Compliance + identify
         }
         url = f"https://newsapi.org/v2/everything?q={query}&language=en&sortBy=publishedAt&apiKey={self.api_key}"  # Full URL (key param ok, header extra safe)
-        
+
         try:
-            async with session.get(url, headers=headers) as resp:  # Async get (non-block)
+            async with use_session.get(url, headers=headers) as resp:  # Async get (non-block)
                 if resp.status != 200:
                     raise Exception(f"API error: {resp.status} – Rate limit?")  # Specific error (debug easy)
                 data = await resp.json()  # Parse JSON
                 articles = data.get("articles", [])  # Safe get (no KeyError)
-                
+
                 # Multilingual hint: Filter non-English if needed (tie to MultilingualAgent)
                 articles = [art for art in articles if art.get('language', 'en') == 'en'][:50]  # Limit 50 (cost control)
-                
+
                 # Encrypt cache (custom: Only if fernet, else plain – no crash)
                 cache_val = json.dumps(articles)
                 if self.fernet:
                     cache_val = self.fernet.encrypt(cache_val.encode()).decode()  # Bytes → encrypt → str
                 self.cache[query] = cache_val
-                
+
                 logger.info(f"✅ Fetched {len(articles)} articles for '{query}' (secure cache updated)")
                 return articles
         except Exception as e:
@@ -82,31 +87,58 @@ class NewsIngestionAgent:
                 logger.error(f"Cache decrypt fail: {e} – Empty return")
         return []  # Ultimate fallback (no crash)
 
-    async def batch_process(self, queries: list):
-        """Batch parallel fetch (gather for speed, error isolation)"""
+    def batch_process(self, queries: list):
+        """Batch parallel fetch (Sync wrapper for Async implementation)"""
+        try:
+            loop = asyncio.get_running_loop()
+        except RuntimeError:
+            loop = None
+
+        if loop and loop.is_running():
+            raise RuntimeError("batch_process called from a running event loop. Use batch_process_async instead.")
+
+        return asyncio.run(self._process_batch_isolated(queries))
+
+    async def batch_process_async(self, queries: list):
+        """Original async batch process (uses shared session)"""
         if not queries:
-            return []  # Edge case: Empty list? No error
-        
-        tasks = [self.fetch_news(q) for q in queries]  # List of coroutines
-        results = await asyncio.gather(*tasks, return_exceptions=True)  # Parallel + catch exceptions (no full fail)
-        
+            return []
+
+        tasks = [self.fetch_news(q) for q in queries]
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+
+        return self._flatten_results(results)
+
+    async def _process_batch_isolated(self, queries: list):
+        """Isolated batch process with own session (safe for asyncio.run)"""
+        if not queries:
+            return []
+
+        # Create a local session for this run to avoid binding issues with self.session
+        timeout = aiohttp.ClientTimeout(total=10)
+        async with aiohttp.ClientSession(timeout=timeout) as session:
+            tasks = [self.fetch_news(q, session=session) for q in queries]
+            results = await asyncio.gather(*tasks, return_exceptions=True)
+            return self._flatten_results(results)
+
+    def _flatten_results(self, results):
+        """Helper to flatten and dedup results"""
         all_articles = []
         for i, res in enumerate(results):
             if isinstance(res, Exception):
                 logger.warning(f"Task {i} failed – Skipping")
             else:
-                all_articles.extend(res)  # Flatten lists
-        
-        # Dedup quick (custom: Title hash, no full agent call here)
+                all_articles.extend(res)
+
+        # Dedup quick
         seen = set()
         unique = [art for art in all_articles if art['title'] not in seen and not seen.add(art['title'])]
-        
+
         logger.info(f"Batch complete: {len(unique)} unique from {len(all_articles)} total")
-        return unique  # Return deduped (early filter, efficiency)
+        return unique
 
     async def close(self):
         """Cleanup (bug-proof: Always close session)"""
         if self.session and not self.session.closed:
             await self.session.close()
             logger.info("Session closed – No leaks")
-         
