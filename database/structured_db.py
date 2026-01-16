@@ -90,13 +90,19 @@ class StructuredDB:
             
             # Insert entities
             entities = article.get('entities', {})
+            entity_data = []
+            article_id = article.get('id')
+
             for entity_type, entity_list in entities.items():
                 if isinstance(entity_list, list):
                     for entity_name in entity_list:
-                        cursor.execute("""
-                            INSERT INTO entities (article_id, entity_type, entity_name)
-                            VALUES (?, ?, ?)
-                        """, (article.get('id'), entity_type, entity_name))
+                        entity_data.append((article_id, entity_type, entity_name))
+
+            if entity_data:
+                cursor.executemany("""
+                    INSERT INTO entities (article_id, entity_type, entity_name)
+                    VALUES (?, ?, ?)
+                """, entity_data)
             
             self.conn.commit()
             return True
